@@ -38,7 +38,7 @@ namespace ClassBoxData
         public double Height
         {
             get => this.height;
-            set
+            private set
             {
                 this.ThrowIfInvalidSide(value, nameof(this.Height));
                 this.height = value;
