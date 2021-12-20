@@ -1,7 +1,7 @@
-﻿using System;
-
 namespace ClassBoxData
 {
+    ﻿using System;
+
     public class StartUp
     {
         static void Main(string[] args)

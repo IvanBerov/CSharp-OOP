@@ -7,15 +7,18 @@ namespace Shapes
     public class Circle : IDrawable
     {
         private int radius;
+        
         public Circle(int radius)
         {
             this.Radius = radius;
         }
+        
         public int Radius
         { 
             get => this.radius;
             set => this.radius = value;
         }
+        
         public void Draw()
         {
             double rIn = this.Radius - 0.4;

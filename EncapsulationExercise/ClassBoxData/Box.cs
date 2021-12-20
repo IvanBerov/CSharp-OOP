@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace ClassBoxData
 {
+    ﻿using System;
+    
     public class Box
     {
         private double length;
@@ -26,6 +24,7 @@ namespace ClassBoxData
                 this.length = value;
             }
         }
+        
         public double Width
         {
             get => this.width;
@@ -39,7 +38,7 @@ namespace ClassBoxData
         public double Height
         {
             get => this.height;
-            set
+            private set
             {
                 this.ThrowIfInvalidSide(value, nameof(this.Height));
                 this.height = value;
@@ -62,6 +61,7 @@ namespace ClassBoxData
                    2 * (this.Length * this.Height) +
                    2 * (this.Width * this.Height);
         }
+        
         private void ThrowIfInvalidSide(double value, string side)
         {
             if (value <= 0)

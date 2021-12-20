@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace ShoppingSpree
 {
+    ﻿using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     public class Person
     {
         private string name;
@@ -45,6 +44,7 @@ namespace ShoppingSpree
             {
                 throw new InvalidOperationException($"{this.Name} can't afford {product.Name}");
             }
+            
             this.products.Add(product);
             this.Money -= product.Cost;
         }
