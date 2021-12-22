@@ -19,7 +19,5 @@ namespace P01.Stream_Progress
 
         public int ByteSend { get; }
         public int Length { get; set; }
-
-        
     }
 }

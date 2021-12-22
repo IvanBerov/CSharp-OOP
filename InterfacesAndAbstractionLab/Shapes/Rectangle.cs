@@ -25,18 +25,7 @@ namespace Shapes
             get => this.height;
             set => this.height = value;
         }
-
-        //public void Draw()
-        //{
-        //    for (int row = 0; row < Height; row++)
-        //    {
-        //        for (int col = 0; col < Width; col++)
-        //        {
-        //            Console.Write("*");
-        //        }
-        //        Console.WriteLine();
-        //    }
-        //}
+        
         public void Draw()
         {
             DrawLine(this.Width, '*', '*');
@@ -44,6 +33,7 @@ namespace Shapes
                 DrawLine(this.Width, '*', ' ');
             DrawLine(this.Width, '*', '*');
         }
+        
         private void DrawLine(int width, char end, char mid)
         {
             Console.Write(end);
