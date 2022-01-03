@@ -9,7 +9,9 @@ namespace AuthorProblem
         public void PrintMethodsByAuthor()
         {
             var type = typeof(StartUp);
-            var methods = type.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.Static);
+
+            var methods = type
+                .GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.Static);
 
             foreach (var method in methods)
             {
