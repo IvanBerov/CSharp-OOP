@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AuthorProblem
 {
@@ -11,6 +9,7 @@ namespace AuthorProblem
         {
             this.Name = name;
         }
+
         public string Name { get; set; }
     }
 }

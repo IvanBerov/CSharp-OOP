@@ -1,5 +1,4 @@
-﻿
-namespace Stealer
+﻿namespace Stealer
 {
     public class Hacker
     {
@@ -18,7 +17,6 @@ namespace Stealer
 
         public void DownloadAllBankAccountsInTheWorld()
         {
-
         }
     }
 }

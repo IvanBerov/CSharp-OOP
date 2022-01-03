@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AuthorProblem
+﻿namespace AuthorProblem
 {
     [Author("Ventsi")]
     public class StartUp
@@ -9,6 +7,7 @@ namespace AuthorProblem
         static void Main(string[] args)
         {
             var tracker = new Tracker();
+
             tracker.PrintMethodsByAuthor();
         }
     }

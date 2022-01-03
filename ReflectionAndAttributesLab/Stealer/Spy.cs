@@ -34,11 +34,14 @@ namespace Stealer
         {
             Type classType = Type.GetType(investigatedClass);
 
-            FieldInfo[] classFields = classType.GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public);
+            FieldInfo[] classFields = classType
+                .GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public);
 
-            MethodInfo[] classPublicMethods = classType.GetMethods(BindingFlags.Instance | BindingFlags.Public);
+            MethodInfo[] classPublicMethods = classType
+                .GetMethods(BindingFlags.Instance | BindingFlags.Public);
 
-            MethodInfo[] classNonPublicMethods = classType.GetMethods(BindingFlags.Instance | BindingFlags.NonPublic);
+            MethodInfo[] classNonPublicMethods = classType
+                .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic);
 
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -63,7 +66,9 @@ namespace Stealer
         public string RevealPrivateMethods(string investigatedClass)
         {
             Type classType = Type.GetType(investigatedClass);
-            MethodInfo[] classMethods = classType.GetMethods(BindingFlags.Instance | BindingFlags.NonPublic);
+
+            MethodInfo[] classMethods = classType
+                .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic);
 
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -82,8 +87,8 @@ namespace Stealer
         {
             Type classType = Type.GetType(investigateClass);
 
-            MethodInfo[] classMethods =
-                classType.GetMethods(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+            MethodInfo[] classMethods = classType
+                .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
 
             StringBuilder stringBuilder = new StringBuilder();
 

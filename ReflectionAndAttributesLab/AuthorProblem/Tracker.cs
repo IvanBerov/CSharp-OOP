@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace AuthorProblem
 {
@@ -23,7 +21,6 @@ namespace AuthorProblem
                     {
                         Console.WriteLine("{0} is written by {1}", method.Name, attr.Name);
                     }
-
                 }
             }
         }
