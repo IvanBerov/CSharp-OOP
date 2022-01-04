@@ -8,6 +8,7 @@ namespace CommandPattern.Core
     public class CommandFactory : ICommandFactory
     {
         private const string CommandSuffix = "Command";
+
         public ICommand CreateCommand(string commandType)
         {
             Type type = Assembly.GetEntryAssembly()
