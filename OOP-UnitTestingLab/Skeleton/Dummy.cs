@@ -1,5 +1,4 @@
 ﻿using System;
-
 public class Dummy
 {
     private int health;

@@ -1,13 +1,13 @@
-﻿using System;
-using BankTest;
+﻿using BankTest;
 using NUnit.Framework;
+
 namespace Bank.Test
 {
     [TestFixture]
     public class BankAcountTests
     {
         [Test]
-        public void When_AccountInitalizedWithPositiveValue_AmountShould_BeChanged()
+        public void When_AccountInitializedWithPositiveValue_AmountShould_BeChanged()
         {
             decimal amount = 5;
 

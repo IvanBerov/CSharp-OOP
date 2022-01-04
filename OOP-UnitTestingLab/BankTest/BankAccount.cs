@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BankTest
+﻿namespace BankTest
 {
+    using System;
+
     public class BankAccount
     {
         private decimal amount = 0;
+
         public BankAccount(decimal amount)
         {
-            Amount = amount;
+            this.Amount = amount;
         }
 
         public decimal Amount
@@ -25,6 +24,5 @@ namespace BankTest
                 amount = value;
             }
         }
-
     }
 }
