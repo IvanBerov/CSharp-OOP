@@ -5,13 +5,9 @@ namespace CarManager
     public class Car
     {
         private string make;
-
         private string model;
-
         private double fuelConsumption;
-
         private double fuelAmount;
-
         private double fuelCapacity;
 
         private Car()
@@ -19,7 +15,8 @@ namespace CarManager
             this.FuelAmount = 0;
         }
 
-        public Car(string make, string model, double fuelConsumption, double fuelCapacity) : this()
+        public Car(string make, string model, double fuelConsumption, double fuelCapacity)
+            : this()
         {
             this.Make = make;
             this.Model = model;

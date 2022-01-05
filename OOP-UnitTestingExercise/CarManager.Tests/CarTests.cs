@@ -1,12 +1,13 @@
-using System;
-using CarManager;
-using NUnit.Framework;
-
 namespace Tests
 {
+    using System;
+    using CarManager;
+    using NUnit.Framework;
+
     public class CarTests
     {
         private Car car;
+
         [SetUp]
         public void Setup()
         {
