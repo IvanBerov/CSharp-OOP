@@ -48,8 +48,6 @@ namespace Tests
         [TestCase(-20)]
         public void Refuel_ThrowsException_WhenFuelIsZeroOrNegative(double fuel)
         {
-           // Car car = new Car("Make", "Model", 10, 100);
-
             Assert.Throws<ArgumentException>(() => car.Refuel(fuel));
         }
 
