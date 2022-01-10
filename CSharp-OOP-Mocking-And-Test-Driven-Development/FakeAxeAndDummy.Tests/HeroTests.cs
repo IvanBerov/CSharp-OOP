@@ -17,12 +17,11 @@ public class HeroTests
         hero = new FakeHero().Fake(name);
         var heroName = hero.Name;
         var experience = hero.Experience;
-        var weapon = this.weapon;
 
         Assert.AreEqual(name, heroName);
         Assert.AreEqual(defaultExperience, experience);
-        Assert.IsInstanceOf(typeof(Axe), weapon);
     }
+
     [Test]
     public void Attack_WithValidTargetParameter_ShouldCallWeaponsAttackMethodOnce()
     {

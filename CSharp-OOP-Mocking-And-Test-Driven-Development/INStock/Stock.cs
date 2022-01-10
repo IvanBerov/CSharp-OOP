@@ -25,21 +25,30 @@ namespace INStock.Contracts
         {
             get
             {
-                if (index > this.Count || index < 0)
+                return this.products[index];
+            }
+            set
+            {
+                if (index > products.Count - 1 || index < 0)
                 {
                     throw new IndexOutOfRangeException();
                 }
-
-                return this.products[index];
+                this.products[index] = value;
             }
-            set => this.products[index] = value;
+            
         }
 
         public void Add(IProduct product)
         {
+            if (product == null)
+            {
+                throw new InvalidOperationException("Add a valid Product !");
+            }
+
             if (!this.products.Contains(product))
             {
                 this.products.Add(product);
+                this.Count++;
             }
         }
 
