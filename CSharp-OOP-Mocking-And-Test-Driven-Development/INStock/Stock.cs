@@ -65,27 +65,58 @@ namespace INStock.Contracts
 
         public IProduct FindByLabel(string label)
         {
-            throw new System.NotImplementedException();
+            if (this.All(x => x.Label != label))
+            {
+                throw new ArgumentException();
+            }
+
+            return this.products.FirstOrDefault(p => p.Label == label);
         }
 
         public IEnumerable<IProduct> FindAllByPrice(decimal price)
         {
-            throw new System.NotImplementedException();
+            List<IProduct> listByPrice = new List<IProduct>();
+
+            foreach (var product in products)
+            {
+                if (product.Price == price)
+                {
+                    listByPrice.Add(product);
+                }
+            }
+
+            return listByPrice;
         }
 
         public IEnumerable<IProduct> FindAllByPriceRage(decimal minPrice, decimal maxPrice)
         {
-            throw new System.NotImplementedException();
+            List<IProduct> listByPriceRange = new List<IProduct>();
+
+            foreach (var product in products)
+            {
+                if (product.Price >= minPrice && product.Price <= maxPrice)
+                {
+                    listByPriceRange.Add(product);
+                }
+            }
+
+            return listByPriceRange.OrderByDescending(p=>p.Price);
         }
 
         public IProduct FindMostExpensiveProduct(int price)
         {
-            throw new System.NotImplementedException();
+            var maxPrice = products.Max(p=>p.Price);
+
+            IProduct product = products.First(p => p.Price == maxPrice);
+
+            return product;
         }
 
         public IEnumerable<IProduct> FindAllByQuantity(int quantity)
         {
-            throw new System.NotImplementedException();
+            var listByQuantity = products.Where(p => p.Quantity == quantity);
+
+            return listByQuantity;
         }
 
         public IEnumerator<IProduct> GetEnumerator()
