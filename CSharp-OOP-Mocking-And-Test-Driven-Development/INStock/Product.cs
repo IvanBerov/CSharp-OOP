@@ -51,6 +51,7 @@ namespace INStock
                 {
                     throw new ArgumentException("Quantity can not be negative or zero!");
                 }
+                this.quantity = value;
             }
         }
 
